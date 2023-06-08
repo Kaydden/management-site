@@ -1,4 +1,24 @@
-body {
+:root {
     --primary-color: #252525;
     --secundary-color: #f2f2f2;
+    --background: #252525;
+    --primary: #f2f2f2;
+    --lines: #333333ca;
+}
+
+[data-theme='light'] {
+    --background: #f2f2f2;
+    --primary: #252525;
+    --lines: #dbdbdb;
+}
+
+[data-theme='dark'] {
+    --background: #252525;
+    --primary: #f2f2f2;
+    --lines: #3333338f;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--primary);
 }

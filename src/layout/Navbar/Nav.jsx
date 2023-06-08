@@ -1,11 +1,9 @@
-import React, { useState } from "react";
-import DarkModeToggle from "react-dark-mode-toggle";
 import "./Nav.css";
 import { Container, Row, Col } from "reactstrap";
+import { Toggle, useTheme } from "react-hook-theme";
+import "react-hook-theme/dist/styles/style.css";
 
 function Nav() {
-  
-  const [isDarkMode, setIsDarkMode] = useState(() => false);
 
   return (
     <div className="Nav">
@@ -41,11 +39,7 @@ function Nav() {
             </ul>
           </row>
           <div className="box">
-            <DarkModeToggle
-              onChange={setIsDarkMode}
-              checked={isDarkMode}
-              size={60}
-            />
+          <Toggle />
           </div>
         </div>
       </Container>
